@@ -3,9 +3,13 @@ body{
   background: #2D2D2D;
   width:1920px;
   color:white;
-
+  font-family:  "doodle.woff2", sans-serif;
 }
-
+@font-face {
+  font-family: "doodle.woff2";
+  src: local("doodle.woff2"),
+  url("fonts/doodle.woff2") format("woff2"),
+}
 .content{
   margin: 0 10%;
 }
@@ -79,10 +83,12 @@ margin-top: 130px;;
 
 }
 .blue-p{
-  color: white;
+  color: aqua;
 }
-.blue-p:hover{
-  color:aqua;
+
+.blue-a:hover{
+  color: aqua;
+  
 }
 
 .img-main1{
