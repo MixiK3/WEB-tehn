@@ -61,25 +61,32 @@ font-size: 20px;
 
 }
 .text1{
-
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  justify-content: space-between;
 
 }
 .p-blue-text-margin0{
 margin: 0;
 }
-.first-text1{
+.h1{
   margin-right: 80px;
-  font-size: 30px;
+  font-size: 50px;
+  margin: 0px;
+  /* margin-top: 0px; */
+  width: 60%;
 }
 .second-text1{
   right: 0;
-bottom: 0;
-margin-top: 130px;;
-
-  font-size: 16px;
-
+  bottom: 0;
+  font-size: 24px;
+  align-items: center;
+  margin: 0px;
+  /* text-align: -webkit-right; */
+  display: flex;
+  align-items: flex-end;
+  width: 600px;
+  text-align: end;
 
 }
 .blue-p{
