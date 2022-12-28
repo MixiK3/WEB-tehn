@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 
@@ -16,7 +17,7 @@
         <header>
             <div class="head-fuelwell">
 
-                <a href="https://mixik3.github.io/WEB-tehn/"><img class="img-header" src=" img/logo.svg"
+                <a href="https://mixik3.github.io/WEB-tehn/"><img class="img-header" src=" ../img/logo.svg"
                         alt="FuelWell"></a>
                 <nav>
                     <ul class="nav-class">
@@ -37,22 +38,25 @@
             <section class="registration-form">
                 
               
-                <form name="registration-form" id="registrationForm" method="POST" action="//httpbin.org/post" role="form">
+                <form name="registration-form" id="registrationForm" method="POST" action="//httpbin.org/post" role="form" class="form">
                 <h1 class='h1-reg'>Регистрация</h1>
-                <fieldset>
+                <div class="fieldset-flex">
+                <fieldset class="fieldset1">
                     <legend>Личная информация</legend>
                   <div class="form-floating">
-                    <input type="text" name="first-name" class="form-control" id="first-name" placeholder="Введите имя" required>
+                    <input type="text" name="first-name" class="form-control1 input" id="first-name" placeholder="Введите имя" required>
                     <label for="first-name" class="label-reg" >Имя</label>
                   </div>
               
                   <div class="form-floating">
-                    <input type="date" name="date-birth" class="form-control" id="date-birth" placeholder="Введите дату рождения">
+                    
+                    <input type="date" name="date-birth" class="form-control input" id="date-birth" placeholder="Введите дату рождения">
                     <label for="date-birth" class="label-reg">Дата рождения</label>
                   </div>
               
                   <div class="form-floating">
-                    <select name="gender" class="form-control" id="gender" placeholder="Выберите пол">
+                    
+                    <select name="gender" class="form-control select" id="gender" placeholder="Выберите пол">
                       <option value="man">Мужской</option>
                       <option value="women">Женский</option>
                     </select>
@@ -61,49 +65,338 @@
                 
                 
                   <div class="form-floating">
-                    <input type="password" name="password" class="form-control" id="password" placeholder="Введите пароль" required>
+                   
+                    <input type="password" name="password" class="form-control1 input" id="password" placeholder="Введите пароль" required>
                     <label for="password" class="label-reg">Пароль</label>
                   </div>
                 </fieldset>
-                  <fieldset>
+                  <fieldset class="fieldset2">
                     <legend>Контактные данные</legend>
                   <div class="form-floating">
-                    <input type="email" name="email-address" class="form-control" id="email-address" placeholder="Введите email" required>
+                    
+                    <input type="email" name="email-address" class="form-control1 input" id="email-address" placeholder="Введите email" required>
                     <label for="email-address" class="label-reg">Email</label>
                   </div>
               
-                  <div class="form-floating">
-                    <input type="tel" name="telephone" class="form-control" id="telephone" placeholder="Введите телефон">
+                  <div class="form-floating"> 
+                    
+                    <input type="tel" name="telephone" class="form-control input" id="telephone" placeholder="Введите телефон">
                     <label for="telephone" class="label-reg">Телефон</label>
                   </div>
               
                   <div class="form-floating">
-                    <select name="interval" class="form-control" id="interval-select" placeholder="Введите интервал для связи">
+
+                    <select name="inter" class="form-control select" id="inter" placeholder="Выберите интервал">
                       <option value="morning">Утро</option>
                       <option value="afternoon">День</option>
                       <option value="evening">Вечер</option>
                       <option value="night">Ночь</option>
                     </select>
-                    <label for="interval" class="label-reg">Удобный интервал для связи</label>
+                    <label for="inter" class="label-reg">Выберите удобный интервал</label>
                   </div>
+                  
+
                 </fieldset>
+              </div>
                   <div class="form-button-set">
                     <button type="submit" class="reg-button">Зарегистрироваться</button>
-                    <button type="reset" class="res-button" value="Reset">Сброс</button>
-                  </div>
-        
+                    <button type="reset" class="res-button" value="Reset" disabled>Сброс</button>
+                  </div>     
                 </form>
-              
               </section>
+            <section class="form2">
 
 
+
+          <form action="">
+            <fieldset class="registration1">
+              <legend class="legend-form2">Определения </legend>
+            <dl>
+
+
+              <dt>Псевдоэлементы</dt>
+                <dd class="dd">Это элементы, которых не существует в HTML-разметке. Они создаются и позиционируются исключительно при помощи CSS. Чаще всего используются для создания различных декоративных элементов (которые не несут содержательного смысла). Также псевдоэлементы приходят на помощь, когда нужно наложить поверх картинки так называемый оверлей (перекрывающий слой).</dd>
+                <ul class="list-pseudoelements"> 
+                  <li class="even-odd">
+                    <input type="checkbox" name="after" checked="checked">
+                    <label for="after" class="list-pseudoelements crossed-out ">::after</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="before" checked="checked">
+                    <label for="before" class="list-pseudoelements crossed-out ">::before</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="cue">
+                    <label for="cue" class="list-pseudoelements">::cue</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="first-letter" checked="checked">
+                    <label for="first-letter" class="list-pseudoelements crossed-out">::first-letter</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="first-line">
+                    <label for="first-line" class="list-pseudoelements">::first-line</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="selection" checked="checked">
+                    <label for="selection" class="list-pseudoelements crossed-out">::selection</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="slotted" >
+                    <label for="slotted" class="list-pseudoelements ">::slotted</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="slotted" >
+                    <label for="slotted" class="list-pseudoelements ">::slotted</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="backdrop" >
+                    <label for="backdrop" class="list-pseudoelements ">::backdrop</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="placeholder" >
+                    <label for="placeholder" class="list-pseudoelements ">::placeholder</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="marker" >
+                    <label for="marker" class="list-pseudoelements ">::marker</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="spelling-error" >
+                    <label for="spelling-error" class="list-pseudoelements ">::spelling-error</label>
+                  </li>
+                  <li class="even-odd">
+                    <input type="checkbox" name="grammar-error" >
+                    <label for="grammar-error" class="list-pseudoelements ">::grammar-error</label>
+                  </li>
+                </ul>
+              <dt>Псевдокласс</dt>
+                <dd class="dd2">Это селектор, который выбирает элементы, находящиеся в специфическом состоянии, например, они являются первым элементом своего типа, или на них наведён указатель мыши. Они обычно действуют так, как если бы вы применили класс к какой-то части вашего документа, что часто помогает сократить избыточные классы в разметке и даёт более гибкий, удобный в поддержке код.</dd>
+                <ul class="list-pseudoclasses">
+                  <li>
+                    <input type="checkbox" name="active" checked="checked">
+                    <label for="active" class="list-pseudoclasses crossed-out">:active</label>
+                  </li>
+
+                  <li>
+                    <input type="checkbox" name="any(en-US)" >
+                    <label for="any(en-US)" class="list-pseudoclasses ">:any (en-US)</label>
+                  </li>
+
+                  <li>
+                    <input type="checkbox" name="any-link" >
+                    <label for="any-link" class="list-pseudoclasses ">:any-link</label>
+                  </li>
+
+                  <li>
+                    <input type="checkbox" name="check" checked="checked">
+                    <label for="check" class="list-pseudoclasses crossed-out">:checked</label>
+                  </li>
+
+                  <li>
+                    <input type="checkbox" name="default" >
+                    <label for="default" class="list-pseudoclasses ">:default</label>
+                  </li>
+
+                  <li>
+                    <input type="checkbox" name="defined" >
+                    <label for="defined" class="list-pseudoclasses ">:defined</label>
+                  </li>
+
+                  <li>
+                    <input type="checkbox" name="dir" >
+                    <label for="dir" class="list-pseudoclasses ">:dir()</label>
+                  </li>
+
+                  <li>
+                    <input type="checkbox" name="disabled" checked="checked">
+                    <label for="disabled" class="list-pseudoclasses crossed-out">:disabled</label>
+                  </li>
+
+                    <li>
+                        <input type="checkbox" name="empty" >
+                        <label for="empty" class="list-pseudoclasses ">:empty</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="enabled" >
+                        <label for="enabled" class="list-pseudoclasses ">:enabled</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="first" >
+                        <label for="first" class="list-pseudoclasses ">:first</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="first-child" >
+                        <label for="first-child" class="list-pseudoclasses ">:first-child</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="first-of-type" >
+                        <label for="first-of-type" class="list-pseudoclasses ">:first-of-type</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="fullscreen" >
+                        <label for="fullscreen" class="list-pseudoclasses ">:fullscreen</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="focus" checked="checked">
+                        <label for="focus" class="list-pseudoclasses crossed-out">:focus</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="hover" checked="checked">
+                        <label for="hover" class="list-pseudoclasses crossed-out">:hover</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="indeterminate" >
+                        <label for="indeterminate" class="list-pseudoclasses ">:indeterminate</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="in-range" >
+                        <label for="in-range" class="list-pseudoclasses ">:in-range</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="invalid" >
+                        <label for="invalid" class="list-pseudoclasses ">:invalid</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="lang" >
+                        <label for="lang" class="list-pseudoclasses ">:lang()</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="last-chi" >
+                        <label for="last-chi" class="list-pseudoclasses ">:last-chi</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="last-of-type" >
+                        <label for="last-of-type" class="list-pseudoclasses ">:last-of-type</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="left" >
+                        <label for="left" class="list-pseudoclasses ">:left</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="link" >
+                        <label for="link" class="list-pseudoclasses ">:link</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="not" >
+                        <label for="not" class="list-pseudoclasses ">:not()</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="nth-child" checked="checked">
+                        <label for="nth-child" class="list-pseudoclasses crossed-out">:nth-child()</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="nth-last-child" >
+                        <label for="nth-last-child" class="list-pseudoclasses ">:nth-last-child()</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="nth-last-of-type" >
+                        <label for="nth-last-of-type" class="list-pseudoclasses ">:nth-last-of-type()</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="nth-of-type" >
+                        <label for="nth-of-type" class="list-pseudoclasses ">:nth-of-type()</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="only-child" >
+                        <label for="only-child" class="list-pseudoclasses ">:only-child</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="only-of-type" >
+                        <label for="only-of-type" class="list-pseudoclasses ">:only-of-type</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="optional" >
+                        <label for="optional" class="list-pseudoclasses ">:optional</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="out-of-range" >
+                        <label for="out-of-range" class="list-pseudoclasses ">:out-of-range</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="read-only" >
+                        <label for="read-only" class="list-pseudoclasses ">:read-only</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="read-write" >
+                        <label for="read-write" class="list-pseudoclasses ">:read-write</label>
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" name="required" >
+                        <label for="required" class="list-pseudoclasses ">:required</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="right" >
+                        <label for="right" class="list-pseudoclasses ">:right</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="root" checked="checked">
+                        <label for="root" class="list-pseudoclasses crossed-out">:root</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="scope(en-US)" >
+                        <label for="scope(en-US)" class="list-pseudoclasses ">:scope (en-US)</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="target" >
+                        <label for="target" class="list-pseudoclasses ">:target</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="valid" >
+                        <label for="valid" class="list-pseudoclasses ">:valid</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="visited" >
+                        <label for="visited" class="list-pseudoclasses ">:visited</label>
+                    </li>
+                </ul>
+          
+          </dl>
+          </fieldset>
+          </form>
+
+
+</section>
 
         </main>
         <footer>
             <div class="black-fon">
                 <div class="bloks-3-footer">
                     <div class="footer-fuelwell">
-                        <img class="img-header" src=" img/logo.svg" alt="FuelWell">
+                        <img class="img-header" src=" ../img/logo.svg" alt="FuelWell">
                         <p>919 North Market Street, Suite 950, Wilmington, Delaware 19801</p>
                     </div>
                     <ul class="social-footer">
