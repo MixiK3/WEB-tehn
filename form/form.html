@@ -118,268 +118,267 @@
                 <dd class="dd">Это элементы, которых не существует в HTML-разметке. Они создаются и позиционируются исключительно при помощи CSS. Чаще всего используются для создания различных декоративных элементов (которые не несут содержательного смысла). Также псевдоэлементы приходят на помощь, когда нужно наложить поверх картинки так называемый оверлей (перекрывающий слой).</dd>
                 <ul class="list-pseudoelements"> 
                   <li class="even-odd">
-                    <input type="checkbox" name="after" checked="checked">
-                    <label for="after" class="list-pseudoelements crossed-out ">::after</label>
+                    <input type="checkbox" name="after" checked="checked" id="after">
+                    <label for="after" class="list-pseudoelements ">::after</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="before" checked="checked">
-                    <label for="before" class="list-pseudoelements crossed-out ">::before</label>
+                    <input type="checkbox" name="before" checked="checked" id="before">
+                    <label for="before" class="list-pseudoelements  ">::before</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="cue">
+                    <input type="checkbox" name="cue" id="cue">
                     <label for="cue" class="list-pseudoelements">::cue</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="first-letter" checked="checked">
-                    <label for="first-letter" class="list-pseudoelements crossed-out">::first-letter</label>
+                    <input type="checkbox" name="first-letter" checked="checked" id="first-letter">
+                    <label for="first-letter" class="list-pseudoelements ">::first-letter</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="first-line">
+                    <input type="checkbox" name="first-line" id="first-line">
                     <label for="first-line" class="list-pseudoelements">::first-line</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="selection" checked="checked">
-                    <label for="selection" class="list-pseudoelements crossed-out">::selection</label>
+                    <input type="checkbox" name="selection" checked="checked" id="selection" >
+                    <label for="selection" class="list-pseudoelements ">::selection</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="slotted" >
+                    <input type="checkbox" name="slotted" id="slotted">
                     <label for="slotted" class="list-pseudoelements ">::slotted</label>
                   </li>
+                 
                   <li class="even-odd">
-                    <input type="checkbox" name="slotted" >
-                    <label for="slotted" class="list-pseudoelements ">::slotted</label>
-                  </li>
-                  <li class="even-odd">
-                    <input type="checkbox" name="backdrop" >
+                    <input type="checkbox" name="backdrop" id="backdrop">
                     <label for="backdrop" class="list-pseudoelements ">::backdrop</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="placeholder" >
+                    <input type="checkbox" name="placeholder" id="placeholder">
                     <label for="placeholder" class="list-pseudoelements ">::placeholder</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="marker" >
+                    <input type="checkbox" name="marker" id="marker">
                     <label for="marker" class="list-pseudoelements ">::marker</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="spelling-error" >
+                    <input type="checkbox" name="spelling-error" id="spelling-error">
                     <label for="spelling-error" class="list-pseudoelements ">::spelling-error</label>
                   </li>
                   <li class="even-odd">
-                    <input type="checkbox" name="grammar-error" >
+                    <input type="checkbox" name="grammar-error" id="grammar-error">
                     <label for="grammar-error" class="list-pseudoelements ">::grammar-error</label>
                   </li>
                 </ul>
               <dt>Псевдокласс</dt>
-                <dd class="dd2">Это селектор, который выбирает элементы, находящиеся в специфическом состоянии, например, они являются первым элементом своего типа, или на них наведён указатель мыши. Они обычно действуют так, как если бы вы применили класс к какой-то части вашего документа, что часто помогает сократить избыточные классы в разметке и даёт более гибкий, удобный в поддержке код.</dd>
+                <dd class="dd2">
+                  Это селектор, который выбирает элементы, находящиеся в специфическом состоянии, например, они являются первым элементом своего типа, или на них наведён указатель мыши. Они обычно действуют так, как если бы вы применили класс к какой-то части вашего документа, что часто помогает сократить избыточные классы в разметке и даёт более гибкий, удобный в поддержке код.
+                </dd>
                 <ul class="list-pseudoclasses">
+                  <div>
+                    <input type="checkbox" name="active" checked="checked" id="active">
+                    <label for="active" class="list-pseudoclasses  ">:active</label>
+                  </li>
+                  
                   <li>
-                    <input type="checkbox" name="active" checked="checked">
-                    <label for="active" class="list-pseudoclasses crossed-out">:active</label>
+                    <input type="checkbox" name="any(en-US)" id="any(en-US)" >
+                    <label for="any(en-US)" class="list-pseudoclasses  ">:any (en-US)</label>
                   </li>
 
                   <li>
-                    <input type="checkbox" name="any(en-US)" >
-                    <label for="any(en-US)" class="list-pseudoclasses ">:any (en-US)</label>
-                  </li>
-
-                  <li>
-                    <input type="checkbox" name="any-link" >
+                    <input type="checkbox" name="any-link" id="any-link">
                     <label for="any-link" class="list-pseudoclasses ">:any-link</label>
                   </li>
 
                   <li>
-                    <input type="checkbox" name="check" checked="checked">
-                    <label for="check" class="list-pseudoclasses crossed-out">:checked</label>
+                    <input type="checkbox" name="check" checked="checked" id="check">
+                    <label for="check" class="list-pseudoclasses ">:checked</label>
                   </li>
 
                   <li>
-                    <input type="checkbox" name="default" >
-                    <label for="default" class="list-pseudoclasses ">:default</label>
+                    <input type="checkbox" name="default" id="default">
+                    <label for="default" class="list-pseudoclasses " id="">:default</label>
                   </li>
 
                   <li>
-                    <input type="checkbox" name="defined" >
-                    <label for="defined" class="list-pseudoclasses ">:defined</label>
+                    <input type="checkbox" name="defined" id="defined">
+                    <label for="defined" class="list-pseudoclasses " id="">:defined</label>
                   </li>
 
                   <li>
-                    <input type="checkbox" name="dir" >
+                    <input type="checkbox" name="dir" id="dir">
                     <label for="dir" class="list-pseudoclasses ">:dir()</label>
                   </li>
 
                   <li>
-                    <input type="checkbox" name="disabled" checked="checked">
-                    <label for="disabled" class="list-pseudoclasses crossed-out">:disabled</label>
+                    <input type="checkbox" name="disabled" checked="checked" id="disabled">
+                    <label for="disabled" class="list-pseudoclasses ">:disabled</label>
                   </li>
 
                     <li>
-                        <input type="checkbox" name="empty" >
+                        <input type="checkbox" name="empty" id="empty">
                         <label for="empty" class="list-pseudoclasses ">:empty</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="enabled" >
+                        <input type="checkbox" name="enabled" id="enabled">
                         <label for="enabled" class="list-pseudoclasses ">:enabled</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="first" >
+                        <input type="checkbox" name="first" id="first">
                         <label for="first" class="list-pseudoclasses ">:first</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="first-child" >
+                        <input type="checkbox" name="first-child" id="first-child">
                         <label for="first-child" class="list-pseudoclasses ">:first-child</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="first-of-type" >
+                        <input type="checkbox" name="first-of-type" id="first-of-type">
                         <label for="first-of-type" class="list-pseudoclasses ">:first-of-type</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="fullscreen" >
+                        <input type="checkbox" name="fullscreen" id="fullscreen">
                         <label for="fullscreen" class="list-pseudoclasses ">:fullscreen</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="focus" checked="checked">
-                        <label for="focus" class="list-pseudoclasses crossed-out">:focus</label>
+                        <input type="checkbox" name="focus" checked="checked" id="focus">
+                        <label for="focus" class="list-pseudoclasses ">:focus</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="hover" checked="checked">
-                        <label for="hover" class="list-pseudoclasses crossed-out">:hover</label>
+                        <input type="checkbox" name="hover" checked="checked" id="hover">
+                        <label for="hover" class="list-pseudoclasses ">:hover</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="indeterminate" >
+                        <input type="checkbox" name="indeterminate" id="indeterminate">
                         <label for="indeterminate" class="list-pseudoclasses ">:indeterminate</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="in-range" >
+                        <input type="checkbox" name="in-range" id="in-range">
                         <label for="in-range" class="list-pseudoclasses ">:in-range</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="invalid" >
+                        <input type="checkbox" name="invalid" id="invalid">
                         <label for="invalid" class="list-pseudoclasses ">:invalid</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="lang" >
+                        <input type="checkbox" name="lang" id="lang">
                         <label for="lang" class="list-pseudoclasses ">:lang()</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="last-chi" >
+                        <input type="checkbox" name="last-chi" id="last-chi">
                         <label for="last-chi" class="list-pseudoclasses ">:last-chi</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="last-of-type" >
+                        <input type="checkbox" name="last-of-type" id="last-of-type">
                         <label for="last-of-type" class="list-pseudoclasses ">:last-of-type</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="left" >
+                        <input type="checkbox" name="left" id="left">
                         <label for="left" class="list-pseudoclasses ">:left</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="link" >
+                        <input type="checkbox" name="link" id="link">
                         <label for="link" class="list-pseudoclasses ">:link</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="not" >
+                        <input type="checkbox" name="not" id="not">
                         <label for="not" class="list-pseudoclasses ">:not()</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="nth-child" checked="checked">
-                        <label for="nth-child" class="list-pseudoclasses crossed-out">:nth-child()</label>
+                        <input type="checkbox" name="nth-child" checked="checked" id="nth-child">
+                        <label for="nth-child" class="list-pseudoclasses ">:nth-child()</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="nth-last-child" >
+                        <input type="checkbox" name="nth-last-child" id="nth-last-child">
                         <label for="nth-last-child" class="list-pseudoclasses ">:nth-last-child()</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="nth-last-of-type" >
+                        <input type="checkbox" name="nth-last-of-type" id="nth-last-of-type">
                         <label for="nth-last-of-type" class="list-pseudoclasses ">:nth-last-of-type()</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="nth-of-type" >
+                        <input type="checkbox" name="nth-of-type" id="nth-of-type">
                         <label for="nth-of-type" class="list-pseudoclasses ">:nth-of-type()</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="only-child" >
+                        <input type="checkbox" name="only-child" id="only-child">
                         <label for="only-child" class="list-pseudoclasses ">:only-child</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="only-of-type" >
+                        <input type="checkbox" name="only-of-type" id="only-of-type">
                         <label for="only-of-type" class="list-pseudoclasses ">:only-of-type</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="optional" >
+                        <input type="checkbox" name="optional" id="optional">
                         <label for="optional" class="list-pseudoclasses ">:optional</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="out-of-range" >
+                        <input type="checkbox" name="out-of-range" id="out-of-range">
                         <label for="out-of-range" class="list-pseudoclasses ">:out-of-range</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="read-only" >
+                        <input type="checkbox" name="read-only" id="read-only">
                         <label for="read-only" class="list-pseudoclasses ">:read-only</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="read-write" >
+                        <input type="checkbox" name="read-write" id="read-write">
                         <label for="read-write" class="list-pseudoclasses ">:read-write</label>
                     </li>
                     
                     <li>
-                        <input type="checkbox" name="required" >
+                        <input type="checkbox" name="required" id="required">
                         <label for="required" class="list-pseudoclasses ">:required</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="right" >
+                        <input type="checkbox" name="right" id="right">
                         <label for="right" class="list-pseudoclasses ">:right</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="root" checked="checked">
-                        <label for="root" class="list-pseudoclasses crossed-out">:root</label>
+                        <input type="checkbox" name="root" checked="checked" id="root">
+                        <label for="root" class="list-pseudoclasses ">:root</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="scope(en-US)" >
+                        <input type="checkbox" name="scope(en-US)" id="scope(en-US)">
                         <label for="scope(en-US)" class="list-pseudoclasses ">:scope (en-US)</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="target" >
+                        <input type="checkbox" name="target" id="target">
                         <label for="target" class="list-pseudoclasses ">:target</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="valid" >
+                        <input type="checkbox" name="valid" id="valid">
                         <label for="valid" class="list-pseudoclasses ">:valid</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" name="visited" >
+                        <input type="checkbox" name="visited" id="visited">
                         <label for="visited" class="list-pseudoclasses ">:visited</label>
                     </li>
                 </ul>
@@ -400,11 +399,11 @@
                         <p>919 North Market Street, Suite 950, Wilmington, Delaware 19801</p>
                     </div>
                     <ul class="social-footer">
-                        <li><a href="https://mixik3.github.io/WEB-tehn/"> <img src=" img/in.png" alt="" class="img-padding"></a></li>
+                        <li><a href="https://mixik3.github.io/WEB-tehn/"> <img src=" ../img/in.svg" alt="" class="img-padding"></a></li>
                             
-                        <li><a href="https://mixik3.github.io/WEB-tehn/"> <img src=" img/telegram.png" alt="" class="img-padding"></a></li>
+                        <li><a href="https://mixik3.github.io/WEB-tehn/"> <img src=" ../img/telegram.svg" alt="" class="img-padding"></a></li>
                         
-                        <li><a href="https://mixik3.github.io/WEB-tehn/"> <img src=" img/facebook.png" alt="" class="img-padding"></a></li>
+                        <li><a href="https://mixik3.github.io/WEB-tehn/"> <img src=" ../img/facebook.svg" alt="" class="img-padding"></a></li>
                         
                     </ul>
                     
@@ -412,8 +411,11 @@
                         <div class="abc">                  
                             <p class="blue-p1">For investors</p>
                             <a href="office@fuel-well.com" class="a-last">office@fuel-well.com</a>
+                            </div>
+                            <div class="abc">  
                             <p class="blue-p1">For B2B</p>
                             <a href="sales@fuel-well.com" class="a-last">sales@fuel-well.com</a>
+                            </div>
                         </div>
                     </div>
                 </div>
