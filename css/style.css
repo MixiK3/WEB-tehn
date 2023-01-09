@@ -71,14 +71,13 @@ button {
 .a{
   color: white;
   text-decoration: none;
+  
 }
 .a:hover{
   color:var(--main-color);
 }
 
-.li:nth-child(6) {
-  margin-right: 0;
-}
+
 
 li:hover {
   color: #154088;
@@ -187,6 +186,7 @@ li:hover {
   border-top: 2px var(--main-color) solid;
   background: transparent;
 }
+
 button:hover{
   color:#00D5E4;
 }
@@ -197,7 +197,14 @@ button:active{
 button:focus{
   color:darkblue;
 }
+button{
+  transition: 1s;
+}
 
+
+.blue-a2:hover {
+  color: var(--main-color);
+}
 .blue-a2 {
   padding: 12px;
   border-bottom: 2px var(--main-color) solid;
@@ -205,12 +212,8 @@ button:focus{
   font-size: 25px;
   text-transform: lowercase;
   margin-top: 15px;
+  transition: 1s;
 }
-
-.blue-a2:hover {
-  color: var(--main-color);
-}
-
 .blue-p3 {
   margin-top: 50px;
 }
@@ -253,11 +256,12 @@ button:focus{
 
 .circle {
   display: flex;
+  transition: 1s;
 }
 
 .circle:hover {
-  background-color: unset !important;
-  color: unset !important;
+  
+  color: var(--main-color);
 }
 
 .p-image-display {
@@ -271,6 +275,15 @@ button:focus{
 
 }
 
+li{
+  transition: 1s;
+}
+a{
+  transition: 1s;
+}
+input{
+  transition: 1s;
+}
 .first-second {
   display: flex;
 }
@@ -306,6 +319,15 @@ button:focus{
   padding-left: 15px;
 }
 
+.loader{
+  display: flex;
+  justify-content: center;
+  
+}
+.loader:hover{
+  visibility: hidden;
+  
+}
 .display-input-text:hover {
   color: #00D5E4;
 }
@@ -523,7 +545,7 @@ button:focus{
 .black-fon {
   position: absolute;
   background-color: #0C0A0A;
-  width: 1500px;
+  
   left:0;
   right:0;
   
@@ -726,7 +748,9 @@ ol li:before {
 .form-control:focus {
   outline: 2px solid #d71ef7;
 }
-
+.abc{
+  padding-bottom: 10px;
+}
 .fieldset-flex{
   display:flex;
 }
@@ -790,10 +814,6 @@ dd::before{
   list-style-type: none;
 }
 
-.crossed-out{
-  text-decoration: line-through;
-}
-
 .even-odd:nth-child(odd) {
   color: rgb(85, 90, 239); /* Цвет фона */
 } 
@@ -809,3 +829,13 @@ dd::before{
   color: red;
 
 }
+
+
+  input[type=checkbox]:checked + label{
+    text-decoration: line-through;
+  }
+
+  ::selection {
+    color: blue;
+  background: white;
+  }
