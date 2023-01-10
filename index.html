@@ -22,7 +22,7 @@
                         alt="FuelWell"></a>
                 <nav>
                     <ul class="nav-class">
-                        <li class="li"><a class="a" href="https://mixik3.github.io/WEB-tehn/demo/demo.html">Demo</a></li>
+                        <li class="li"><a class="a" href="https://mixik3.github.io/WEB-tehn/Demo/Demo.html">Demo</a></li>
                         <li class="li"><a class="a" href="https://mixik3.github.io/WEB-tehn/form/form.html">Form</a></li>
                         <li class="li"><a class="a" href="#no-scroll">About</a></li>
                         <li class="li"><a class="a" href="#no-scroll">Benefits</a></li>
@@ -30,7 +30,7 @@
                         <li class="li"><a class="a" href="#no-scroll">Reviews</a></li>
                         <li class="li"><a class="a" href="#no-scroll">Cooperation</a></li>
                         <li class="li"><a class="a" href="#no-scroll">Contacts</a></li>
-                        
+                        <li class="li"><button data-modal id="myBtn" class="mod-but">Регистрация</button></li>
                     </ul>
                 </nav>
 
@@ -381,8 +381,240 @@
             </div>
             </div>
         </footer>
+
+
+
+        <!-- Модальное окно -->
+        
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h2 class="centerH">Окно регистрации</h2>
+              <span class="close">x</span>
+              
+              <form name="registration-form" id="myForm" method="POST" action="//httpbin.org/post" role="form" class="form">
+                  <h1 class='h1-reg'>Регистрация</h1>
+                  <div class="fieldset-flex">
+                  <fieldset class="fieldset1">
+                      <legend>Личная информация</legend>
+                    <div class="form-floating">
+                      <input type="text" name="first-name" class="form-control1 input" id="first-name" placeholder="Введите имя" required>
+                      <label for="first-name" class="label-reg" >Имя</label>
+                    </div>
+                
+                   
+                
+                    <div class="form-floating">
+                      
+                      <input type="email" name="email" class="form-control1 input" id="email" placeholder="Введите email" required>
+                      <label for="email" class="label-reg">Email</label>
+                    </div>
+                    <div id="errorEmail"></div>
+                  <div class="form-floating">
+                      <button class='svin' id="area" ></button>
+                      <input type="password" id="password" class="form-control1 " pattern=".{6,}"  required 
+                      oninvalid="this.setCustomValidity('Введите верное значение')"
+                      oninput="this.setCustomValidity('')">
+                    
+                      <label for="password" class="label-reg">Пароль</label>
+                  </div>
+                  <div id="errorPas"></div>
+                  
+                    </fieldset>   
+                </div>
+                    <div class="form-button-set">
+                      <button type="submit" class="reg-button" formaction="handler.php" formmethod="post">Регистрация</button>
+                      <button type="reset" class="res-button" value="Reset" >Сброс</button>
+                    </div>  
+                
+                  </form>
+                </section>
+          
+            
+          </div>
+        </div>
+      </div>
+
     </div>
 
 </body>
+<script>
+    function incrementValue()
+ {
+     var value = parseInt(document.getElementById('number').value, 10);
+     value = isNaN(value) ? 0 : value;
+     value++;
+     document.getElementById('number').value = value;
+ }
+ 
+ 
+ var modal = document.getElementById('myModal');
+ 
+ var btn = document.getElementById("myBtn");
+ 
+ var span = document.getElementsByClassName("close")[0]; 
+ btn.onclick = function() {
+     modal.style.display = "block";
+ }
+ span.onclick = function() {
+     modal.style.display = "none";
+ }
+ window.onclick = function(event) {
+     if (event.target == modal) {
+         modal.style.display = "none";
+     }
+ }
+ 
+ // Показ пароля
 
+ function show_hide_password(target){
+     var input = document.getElementById('password-input');
+     if (input.getAttribute('type') == 'password') {
+         target.classList.add('view');
+         input.setAttribute('type', 'text');
+     } else {
+         target.classList.remove('view');
+         input.setAttribute('type', 'password');
+     }
+     return false;
+ }
+//  С пароля на текст и обратно 
+const y = area.onpointerdown = area.onpointerup = log;
+function log(event) {
+    if (password.type == 'text') password.type = 'password'; else password.type = 'text';
+}
+// валидация
+email.onblur = function () {
+  if (!email.value.includes("@")) {
+    email.classList.add("invalid");
+    errorEmail.innerHTML = "Пожалуйста, введите правильный email.";
+  }
+};
+email.onfocus = function () {
+  if (this.classList.contains("invalid")) {
+    this.classList.remove("invalid");
+    errorEmail.innerHTML = "";
+  }
+};
+var password = document.getElementById('password');
+password.onblur = function () {
+  if (password.value.length < 6 ) {
+    password.classList.add("invalid");
+    errorPas.innerHTML = "Длина должна быть больше 6";
+    
+  }
+};
+
+password.onfocus = function () {
+  if (this.classList.contains("invalid")) {
+    this.classList.remove("invalid");
+    errorPas.innerHTML = "";
+  }
+};
+
+// 
+// Отправка формы
+$('#myForm')
+    .ajaxForm({
+        url : 'myscript.php', // or whatever
+        dataType : 'json',
+        success : function (response) {
+            alert("The server says: " + response);
+        }
+    })
+;
+     </script>
+ <style>
+    #errorPas, #errorEmail {
+        color: red;
+    }
+     .modal {
+     display: none; 
+     position: fixed;
+     z-index: 1;
+     padding-top: 10%; 
+     left: 0;
+     top: 0;
+     width: 100%; 
+     height: 100%; 
+     overflow: auto; 
+     background-color: rgb(0,0,0);
+     background-color: rgba(0,0,0,0.4); 
+ }
+ 
+ .modal-content {
+     position: relative;
+     background-color: #fff;
+     margin: auto;
+     padding: 0;
+     border: 1px solid #000;
+     width: 30%;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+     
+   
+ }
+ 
+ 
+ 
+ .close {
+     color: white;
+     float: right;
+     font-size: 40px;
+     font-weight: bold;
+ }
+ 
+ 
+ .modal-header {
+     padding: 2px 16px;
+     background-color: grey;
+     color: white;
+ }
+ .mod-but {
+   background-color: rgb(226, 159, 15);
+ }
+ .button1{
+     width:200px;
+     height: 50px;
+     color: white;
+     background-color: orange;
+ }
+ .button1:active{
+     background-color: purple;
+ }
+ .centerH{
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .reg-button {
+   height: 40px;
+   color: white;
+   background-color: rgb(238, 44, 206); 
+   margin-right: 10px;
+   width: 25%;
+   box-shadow: -5px 5px 5px  orange;
+ }
+ 
+ .res-button {
+   height: 40px;
+   color: white;
+   background-color: orange;
+   width: 25%;
+   box-shadow: 5px 5px 5px  rgb(238, 44, 206);
+ }
+ 
+ .svin {
+     position: absolute;
+     right: 40px;
+     top: 330px;
+     width: 20px;
+     height: 20px;
+     vertical-align: middle;
+     background: url(https://snipp.ru/demo/495/view.svg) no-repeat;
+ }
+ 
+ </style>
+
+<!-- Модальное окно -->
+        
 </html>
