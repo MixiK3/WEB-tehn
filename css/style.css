@@ -64,9 +64,13 @@ button {
 }
 
 .li {
-  margin-right: 30px;
   font-size: 20px;
   color: white;
+  margin: auto;
+  padding-right: 25px;
+}
+.li:nth-child(9){
+  padding-right: 0;
 }
 .a{
   color: white;
@@ -750,7 +754,7 @@ ol li:before {
   background-color: grey; 
   margin-right: 10px;
   width: 25%;
-  box-shadow: -5px 5px 5px  orange;
+  box-shadow: -5px 5px 5px  rgb(247, 246, 244);
 }
 
 .res-button {
@@ -786,7 +790,7 @@ ol li:before {
 .form-control1{
   height: 35px;
   margin-bottom:10px;
-  border: 5px orange solid;
+  border: 5px #08d1ff solid;
 }
 .form-control1:hover{
   border: 5px purple solid;
@@ -887,15 +891,29 @@ dd::before{
   margin: 0 40px 2em 0;
   background: rgba(228, 225, 228, 0.5);
 }
+.wrap1{
+  display: inline-block;
+  margin: 0 40px 2em 20px;
+  background: rgba(228, 225, 228, 0.5);
+}
 .divik {
   width: 170px;
-  height: 100px;
   line-height: 100px;
   margin: 0 auto;
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+.divik1{
+  width: 170px;
+  line-height: 100px;
+  margin: 0 auto;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  margin-left: 20px;
 }
 .one {
   background: yellow;
@@ -1013,9 +1031,9 @@ dd::before{
 
 .card.green {
 border: 10px solid transparent;
-border-image: radial-gradient(#D432D8, #F4A582);
--moz-border-image: -moz-radial-gradient(#D432D8, #F4A582);
--webkit-border-image: -webkit-radial-gradient(#D432D8, #F4A582);
+
+-moz-border-image: -moz-radial-gradient(#14a2ce, #F4A582);
+-webkit-border-image: -webkit-radial-gradient(#3904f7, #F4A582);
 border-image-slice: 1;
 }
 
@@ -1036,4 +1054,7 @@ display: table;
 }
 .section-three{
   margin-bottom: 100px;
+}
+#error {
+  color: red;
 }
