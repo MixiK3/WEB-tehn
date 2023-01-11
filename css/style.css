@@ -896,7 +896,7 @@ dd::before{
   margin: 0 40px 2em 20px;
   background: rgba(228, 225, 228, 0.5);
 }
-.divik {
+.two-d {
   width: 170px;
   line-height: 100px;
   margin: 0 auto;
@@ -905,7 +905,7 @@ dd::before{
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.divik1{
+.two-d1{
   width: 170px;
   line-height: 100px;
   margin: 0 auto;
@@ -913,7 +913,7 @@ dd::before{
   -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .one {
   background: yellow;
@@ -938,7 +938,7 @@ dd::before{
 
 
 
-.divik {
+.two-d {
   height: 120px;
   width: 220px;  
 }
