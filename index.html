@@ -38,6 +38,11 @@
         </header>
 
         <main>
+            <div class="success-alert" id="successDiv">
+                <div class="success" >
+                  <p><strong>Данные успешно отправлены. </strong></p>
+                </div>
+                </div>
             <section>
                 <div class="text1">
                     <h1 class="h1"><span class="blue-p">FUELWELLⓇ</span> - REDUCE COMMERICAL FLEET CARBON FOOTPRINT</h1>
@@ -389,10 +394,10 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
           <div class="modal-header">
-              <h2 class="centerH">Окно регистрации</h2>
-              <span class="close">x</span>
               
-              <form name="registration-form" id="myForm" method="POST" action="//httpbin.org/post" role="form" class="form">
+              <a href='#no-scroll'><span class="close">x</span></a>
+              
+              <form name="registration-form" id="myFormId" method="POST" action="//httpbin.org/post" role="form" class="form">
                   <h1 class='h1-reg'>Регистрация</h1>
                   <div class="fieldset-flex">
                   <fieldset class="fieldset1">
@@ -411,9 +416,9 @@
                     </div>
                     <div id="errorEmail"></div>
                   <div class="form-floating">
-                      <button class='svin' id="area" ></button>
-                      <input type="password" id="password" class="form-control1 " pattern=".{6,}"  required 
-                      oninvalid="this.setCustomValidity('Введите верное значение')"
+                      <a href='#no-scroll' class='hide-pass' id="area" ></a>
+                      <input type="password" name='password' id="password" class="form-control1 " pattern=".{6,}"  required 
+                      oninvalid="this.setCustomValidity('Длина должна быть больше 6 символов.')"
                       oninput="this.setCustomValidity('')">
                     
                       <label for="password" class="label-reg">Пароль</label>
@@ -423,20 +428,25 @@
                     </fieldset>   
                 </div>
                     <div class="form-button-set">
-                      <button type="submit" class="reg-button" formaction="handler.php" formmethod="post">Регистрация</button>
+                      <button type="submit" class="reg-button" formmethod="post" >Регистрация</button>
                       <button type="reset" class="res-button" value="Reset" >Сброс</button>
                     </div>  
-                
+
+                 
+
                   </form>
+                 
                 </section>
           
-            
+               
           </div>
         </div>
       </div>
 
     </div>
-
+   
+      
+      
 </body>
 <script>
     function incrementValue()
@@ -487,7 +497,7 @@ function log(event) {
 email.onblur = function () {
   if (!email.value.includes("@")) {
     email.classList.add("invalid");
-    errorEmail.innerHTML = "Пожалуйста, введите правильный email.";
+    errorEmail.innerHTML = "Пожалуйста, введите корректный email.";
   }
 };
 email.onfocus = function () {
@@ -500,7 +510,7 @@ var password = document.getElementById('password');
 password.onblur = function () {
   if (password.value.length < 6 ) {
     password.classList.add("invalid");
-    errorPas.innerHTML = "Длина должна быть больше 6";
+    errorPas.innerHTML = "Длина должна быть больше 6 символов.";
     
   }
 };
@@ -514,15 +524,38 @@ password.onfocus = function () {
 
 // 
 // Отправка формы
-$('#myForm')
-    .ajaxForm({
-        url : 'myscript.php', // or whatever
-        dataType : 'json',
-        success : function (response) {
-            alert("The server says: " + response);
-        }
-    })
-;
+function closeModalWindow() {
+      document.querySelector(".modal").style.display = "none";
+    }
+document.getElementById('myFormId').addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+  const data = Array.from(formData.entries()).reduce((memo, [key, value]) => ({
+    ...memo,
+    [key]: value,
+  }), {});
+   console.log(JSON.stringify(Object.fromEntries(formData)));
+
+   // Все успешно
+   closeModalWindow();
+   document.getElementById('myFormId').reset();
+   document.getElementById("successDiv").style.display = 'inline';  
+   setInterval(() => document.getElementById("successDiv").style.display = 'none', 2000)
+
+
+ 
+});
+
+
+
+
+
+
+
+
+
+
      </script>
  <style>
     #errorPas, #errorEmail {
@@ -570,7 +603,9 @@ $('#myForm')
      color: white;
  }
  .mod-but {
-   background-color: rgb(226, 159, 15);
+    background-color: #0c0a0a;
+    border: 3px #08d1ff solid;
+    padding: 5px;
  }
  .button1{
      width:200px;
@@ -589,30 +624,69 @@ $('#myForm')
  .reg-button {
    height: 40px;
    color: white;
-   background-color: rgb(238, 44, 206); 
+   background-color: #08d1ff; 
    margin-right: 10px;
    width: 25%;
-   box-shadow: -5px 5px 5px  orange;
+   box-shadow: -5px 5px 5px  rgb(230, 228, 225);
  }
  
  .res-button {
    height: 40px;
    color: white;
-   background-color: orange;
+   background-color: #0c0a0a;
    width: 25%;
-   box-shadow: 5px 5px 5px  rgb(238, 44, 206);
+   box-shadow: 5px 5px 5px  rgb(238 44 206);
  }
  
- .svin {
+ .hide-pass {
      position: absolute;
      right: 40px;
-     top: 330px;
+     top: 284px;
      width: 20px;
      height: 20px;
      vertical-align: middle;
      background: url(https://snipp.ru/demo/495/view.svg) no-repeat;
  }
- 
+ .alert{
+    background-color: green;
+    color: #000;
+ }
+ #successDiv {
+  transition: opacity 1s;
+}
+.success {
+  color: green;
+  margin: 0 auto;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  
+}
+.success-alert {
+    display: flex;
+  width: 200px;
+  height: 85px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: lightgreen;
+  position: absolute;
+  z-index: 1000;
+  margin: 0 auto;
+  left: 0;
+  right: 0; 
+ display: none;
+
+
+  
+}
+::selection{
+    
+    color:aquamarine !important;
+    background: black !important;
+    
+}
  </style>
 
 <!-- Модальное окно -->
